@@ -1,4 +1,4 @@
-
+import logging
 # try 机制
 try:
     print('try...')
@@ -21,11 +21,12 @@ def bar(s):
 
 def main():
     try:
-        print('try...')
+        print('try P24...')
         bar(0)
     except Exception as e:
-        print('Error:',e)
+        # print('Error:',e)
+        logging.exception(e)
     finally:
-        print('Finally...')
+        print('Finally P30...')
 
 main()
